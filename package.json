@@ -1,0 +1,45 @@
+{
+  "name": "poker-transcendence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "iohook": "^0.6.5"
+  },
+  "devDependencies": {
+    "electron": "^8.2.3",
+    "electron-packager": "^14.2.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-packager . PokerRandomizer",
+    "build:windows": "electron-packager . PokerTranscendence --platform=win32 --arch=x64",
+    "electron:abi": "electron -a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirJarabica/poker-transcendence.git"
+  },
+  "author": "vladimir.jarabica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladimirJarabica/poker-transcendence/issues"
+  },
+  "homepage": "https://github.com/VladimirJarabica/poker-transcendence#readme",
+  "iohook": {
+    "targets": [
+      "node-72",
+      "electron-76"
+    ],
+    "platforms": [
+      "win32",
+      "darwin",
+      "linux"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
+  }
+}

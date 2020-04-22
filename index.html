@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poker transcendence</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      #random {
+        font-size: 50px;
+        font-weight: bold;
+        color: #efefef;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="random">-</div>
+    <script>
+      const { ipcRenderer } = require("electron");
+
+      ipcRenderer.on("ping", () => {
+        document.getElementById("random").innerText = Math.ceil(
+          Math.random() * 100
+        );
+      });
+    </script>
+  </body>
+</html>

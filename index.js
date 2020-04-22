@@ -5,8 +5,8 @@ app.allowRendererProcessReuse = true;
 
 app.on("ready", () => {
   const win = new BrowserWindow({
-    width: 100,
-    height: 100,
+    width: 60,
+    height: 60,
     webPreferences: { nodeIntegration: true },
     alwaysOnTop: true,
     frame: null,
